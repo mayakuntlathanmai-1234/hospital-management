@@ -3,7 +3,9 @@ services:
     name: hospital-management
     runtime: java
     buildCommand: mvn clean install -DskipTests
-    startCommand: java -Dspring.profiles.active=prod -jar target/*.jar
+    startCommand: java -Dspring.profiles.active=prod -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: prod
+      - key: JAVA_OPTS
+        value: -Xmx512m
