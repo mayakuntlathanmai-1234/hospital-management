@@ -1,11 +1,7 @@
 services:
   - type: web
     name: hospital-management
-    runtime: java
-    buildCommand: mvn clean install -DskipTests
-    startCommand: java -Dspring.profiles.active=prod -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar
+    runtime: docker
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: prod
-      - key: JAVA_OPTS
-        value: -Xmx512m
