@@ -8,5 +8,5 @@ RUN mvn clean package -DskipTests
 FROM openjdk:11-jre-slim
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
-EXPOSE 8080
-ENTRYPOINT ["java", "-Dspring.profiles.active=prod", "-Dserver.port=${PORT:8080}", "-Xmx512m", "-jar", "app.jar"]
+EXPOSE 7860
+ENTRYPOINT ["java", "-Dspring.profiles.active=prod", "-Dserver.port=7860", "-Xmx512m", "-jar", "app.jar"]

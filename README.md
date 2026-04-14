@@ -1,3 +1,13 @@
+---
+title: Hospital Management System
+emoji: 🏥
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Hospital Management System
 
 A professional Hospital Management System built with Spring Boot, Thymeleaf, and JPA.
